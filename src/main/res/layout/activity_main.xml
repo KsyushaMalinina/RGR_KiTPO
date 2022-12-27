@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@id/low_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/main_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1.0"
+            android:paddingBottom="10dp"
+            android:textSize="26sp" />
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/low_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginBottom="18dp"
+            android:background="@color/teal_200"
+            app:layout_constraintBottom_toTopOf="@+id/index_inp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <TextView
+            android:id="@+id/index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="223dp"
+            android:layout_marginBottom="237dp"
+            android:text="Индекс:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/index_inp"
+            android:layout_width="64dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="157dp"
+            android:layout_marginBottom="229dp"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="258dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="87dp"
+            android:layout_marginBottom="237dp"
+            android:text="Значение:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/value_inp"
+            android:layout_width="70dp"
+            android:layout_height="27dp"
+
+            android:layout_marginStart="327dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="229dp"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/pushend"
+            android:layout_width="161dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="246dp"
+            android:layout_marginBottom="190dp"
+            android:minWidth="120dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="вставка в конец"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="160dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="133dp"
+            android:layout_marginEnd="246dp"
+            android:layout_marginBottom="116dp"
+            android:minWidth="100dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="Вставка по индексу"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/delete_indx"
+            android:layout_width="160dp"
+            android:layout_height="37dp"
+
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="243dp"
+            android:layout_marginEnd="246dp"
+            android:layout_marginBottom="6dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="удаление по индексу"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/sort"
+            android:layout_width="160dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="246dp"
+            android:layout_marginBottom="80dp"
+            android:padding="0dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="сортировка"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/show"
+            android:layout_width="136dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="190dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="показать список"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="135dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="169dp"
+            android:layout_marginTop="133dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="116dp"
+            android:minWidth="0dp"
+            android:padding="5dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="сохранение"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/load"
+            android:layout_width="136dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="169dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="106dp"
+            android:layout_marginBottom="154dp"
+            android:minWidth="0dp"
+            android:padding="5dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="загрузка"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="112dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="295dp"
+            android:layout_marginBottom="237dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/pushfront"
+            android:layout_width="160dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="247dp"
+            android:layout_marginBottom="153dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="вставка в начало"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="134dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="79dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="очистить список"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="160dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="206dp"
+            android:layout_marginEnd="246dp"
+            android:layout_marginBottom="43dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="поиск по индексу"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
